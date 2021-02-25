@@ -14,9 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('error', ['error' => '404', 'msj' => 'Pagina no encontrada']);
-});
+// Route::get('/', function () {
+//     return view('error', ['error' => '404', 'msj' => 'Pagina no encontrada']);
+// });
+
+Route::resource('/', 'HomeController');.
 
 // 404
 Route::pattern('inexistentes', '.*');
